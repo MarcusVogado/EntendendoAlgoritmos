@@ -10,11 +10,7 @@ public class Program
 
                            //PESQUISA BINARIA
         
-        List<int> minhaLista = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,14 };
-        Console.WriteLine(Pesquisa_Binaria.PesquisaBinaria(minhaLista, 6));
+        List<int> minhaLista_Int = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,14 };        
+        Console.WriteLine(Pesquisa_Binaria.PesquisaBinariaInt(minhaLista_Int, 6));        
     }
-
 }
-
-
-;
