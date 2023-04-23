@@ -29,6 +29,24 @@ namespace EntendendoAlgoritimos.Algoritimos
                 }
             }
             return resultado;
-        }        
+        }    
+        public static string? PesquisaBinariaSstring(List<string> list,string item)
+        {
+            int index = 0;
+            list.Sort();
+            index= list.BinarySearch(item);
+            if (index != 0)
+            {
+                foreach (var nome in list)
+                {
+                    Console.WriteLine(nome);
+                }
+                return index.ToString();
+            }
+            else
+            {
+                return null;
+            }
+        } 
     }   
 }
