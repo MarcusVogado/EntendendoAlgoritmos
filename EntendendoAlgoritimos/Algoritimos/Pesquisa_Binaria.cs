@@ -15,10 +15,11 @@ namespace EntendendoAlgoritimos.Algoritimos
             var alta = list.Count() - 1; // baixo e alta acompanham a parte da lista que estamos buscando, utilizamos(-1) pois o count retorna o valor sem a posição 0 da lista 
             while (baixa <= alta) // enquanto não chegar a um único elemento
             {
-                var meio = (baixa + alta) / 2;//verificamos o elemento central                  
-                if (list[meio] == item)
-                    resultado = meio;  //onde achamos o item
-                if (list[meio] > item)
+                var meio = (baixa + alta) / 2;//verificamos o elemento central
+                var chute = list[meio];                            //
+                if (chute == item)
+                    resultado = chute;  //onde achamos o item
+                if (chute > item)
                 {
                     alta = meio - 1; // se o chute[meio da lista] for mais alto que o item
                 }
