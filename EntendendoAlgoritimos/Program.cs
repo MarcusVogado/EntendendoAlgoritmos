@@ -28,6 +28,7 @@ public class Program
         #endregion
 
         #region RECURSÃO
+        // Toda função recursiva tem que ter o caso-Base-onde a função deve parar. e o caso- recursivo-onde a função chama ela mesma (cuidado com loop infinito)
         #region CAUCULAR FATORIAL
         Console.WriteLine("CAUCULAR FATORIAL");
         var fatorial=Recursao.CaucularFat(5);

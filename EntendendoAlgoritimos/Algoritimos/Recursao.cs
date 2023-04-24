@@ -38,7 +38,16 @@ namespace EntendendoAlgoritimos.Algoritimos
         {
             Console.WriteLine("OK, tchau...");
         }
+        private static void CountagemRegressiva(int i)
+        {
+            Console.WriteLine(i);
 
+            // base case
+            if (i <= 0) return;
+
+            // recursive case
+            CountagemRegressiva(i - 1);
+        }
 
     }
 }
