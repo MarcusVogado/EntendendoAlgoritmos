@@ -18,16 +18,16 @@ namespace EntendendoAlgoritimos.Algoritimos
 
             while (list.Count != 0)
             {
-                var min = list.Min();
-                list.Remove(min);
-                minList.AddLast(min);
+                var min = list.Min();//acha o menor valor de um array/lista  
+                list.Remove(min);//remove esse valor do array/lista original
+                minList.AddLast(min);//adiciona esse valor a lista Minima com o utilizando o termo Last adicionando ao ultimo índice do array
 
-                var max = list.Max();
-                list.Remove(max);
-                maxList.AddFirst(max);
+                var max = list.Max();//acha o maior valor de um array/lista
+                list.Remove(max);//remove esse valor do array/lista original
+                maxList.AddFirst(max);//adiciona esse valor a lista maxima utilizando o termo First adicionando na primeira posição do índice
             }
 
-            return minList.Union(maxList);
+            return minList.Union(maxList);// unindo as 2 Listas MIN E MAX  Utilizando o Namespace LindekList
         }
 
     }
