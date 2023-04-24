@@ -30,11 +30,11 @@ namespace EntendendoAlgoritimos.Algoritimos
             }
             return resultado;
         }    
-        public static string? PesquisaBinariaSstring(List<string> list,string item)
+        public static string? PesquisaBinariastring(List<string> list,string item)
         {
             int index = 0;
-            list.Sort();
-            index= list.BinarySearch(item);
+            list.Sort(); //Ordenando a Lista, sem ordenar sempre o resultado será null.
+            index= list.BinarySearch(item);// Achando o item
             if (index != 0)
             {
                 foreach (var nome in list)
