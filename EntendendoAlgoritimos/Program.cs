@@ -26,5 +26,16 @@ public class Program
         Console.WriteLine(string.Join(',', sortedArr));
         Console.WriteLine("_____________________");
         #endregion
+
+        #region RECURSÃO
+        #region CAUCULAR FATORIAL
+        Console.WriteLine("CAUCULAR FATORIAL");
+        var fatorial=Recursao.CaucularFat(5);
+        Console.WriteLine(fatorial);
+        Console.WriteLine("COMPRIMENTAR");
+        Recursao.Comprimentar("Marcus Vogado");
+
+        #endregion
+        #endregion
     }
 }
