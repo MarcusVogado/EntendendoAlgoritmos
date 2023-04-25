@@ -18,7 +18,6 @@ public class Program
         Console.WriteLine("_____________________________");
         #endregion
 
-
         #region ORDENAÇÃO POR SELEÇÃO
         Console.WriteLine("ORDENAÇÃO POR SELEÇÃO");
         var numbers = new int[] { 4, 5, 1, 3, 10, 9, 6, 8, 7, 2 };
@@ -35,8 +34,13 @@ public class Program
         Console.WriteLine(fatorial);
         Console.WriteLine("COMPRIMENTAR");
         Recursao.Comprimentar("Marcus Vogado");
-
         #endregion
+        #endregion
+
+        #region QUICKSORT
+        Console.WriteLine("QUICKSORT");
+        var arr = new[] { 10, 5, 2, 3 };
+        Console.WriteLine(string.Join(", ",QuickSort.QuickSor(arr)));
         #endregion
     }
 }

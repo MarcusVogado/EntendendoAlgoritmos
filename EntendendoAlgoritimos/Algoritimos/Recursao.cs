@@ -42,10 +42,10 @@ namespace EntendendoAlgoritimos.Algoritimos
         {
             Console.WriteLine(i);
 
-            // base case
+            //caso-base 
             if (i <= 0) return;
 
-            // recursive case
+            // caso recursivo - quando a função chama a si mesma
             CountagemRegressiva(i - 1);
         }
 
