@@ -42,6 +42,8 @@ public class Program
         var arr = new[] { 10, 5, 2, 3 };
         Console.WriteLine(string.Join(", ",QuickSort.QuickSor(arr)));
         #endregion
-
+        #region TABELAS HASH
+        Console.WriteLine("TABELAS HASH");
+        #endregion
     }
 }
