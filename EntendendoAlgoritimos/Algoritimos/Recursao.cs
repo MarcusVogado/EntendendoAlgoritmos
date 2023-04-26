@@ -9,8 +9,7 @@ namespace EntendendoAlgoritimos.Algoritimos
     public  class Recursao
     {
         public static int CaucularFat(int fatorial)
-        {
-           
+        {           
             if(fatorial<=1)//caso-base
             {
                 return 1;
@@ -20,7 +19,6 @@ namespace EntendendoAlgoritimos.Algoritimos
                 return fatorial * CaucularFat(fatorial-1); // chamando a função dentro da própria função passando o fatorial recebido -1 até chegar ao resultado;
             }
         }
-
         public static void Comprimentar(string name)
         {
             Console.WriteLine($"Olá, {name}!");
@@ -28,12 +26,10 @@ namespace EntendendoAlgoritimos.Algoritimos
             Console.WriteLine("Se preparando para dizer Tchau...");
             Bye();
         }
-
         private static void Greet2(string name)
         {
             Console.WriteLine($"Como você está?, {name}?");
         }
-
         private static void Bye()
         {
             Console.WriteLine("OK, tchau...");
@@ -41,10 +37,8 @@ namespace EntendendoAlgoritimos.Algoritimos
         private static void ContagemRegressiva(int i)
         {
             Console.WriteLine(i);
-
             //caso-base 
             if (i <= 0) return;
-
             // caso recursivo - quando a função chama a si mesma
             ContagemRegressiva(i - 1);
         }
