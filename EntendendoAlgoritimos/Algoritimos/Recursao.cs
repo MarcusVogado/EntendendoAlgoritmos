@@ -11,7 +11,7 @@ namespace EntendendoAlgoritimos.Algoritimos
         public static int CaucularFat(int fatorial)
         {
            
-            if(fatorial<=1)
+            if(fatorial<=1)//caso-base
             {
                 return 1;
             }
