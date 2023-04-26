@@ -1,7 +1,7 @@
 <h1><b>ESTUDO SOBRE O LIVRO: ENTENDENDO ALGORITIMOS</b><h1>
-<h2>Autora: Aditya Y. Bhargava</h2>
+<h2>Autora: Aditya Y. Bhargava</h2><br>
   *****************************************************************
-  <h1><b>Regras para construção do algoritmo*Retirada do Livro da Faculdade UNIP</b></h1><br>
+  <h1><b>Regras para construção do algoritmo *Retiradas do Livro da Faculdade UNIP*</b></h1><br>
 Para construir um algoritmo, existem algumas regras práticas, que podem ser aperfeiçoadas conforme 
 a experiência do programador. Deve-se ter em mente que um mau desenvolvedor de algoritmos 
 dificilmente será um bom programador. Portanto, antes de ficar diante do computador para desenvolver 
