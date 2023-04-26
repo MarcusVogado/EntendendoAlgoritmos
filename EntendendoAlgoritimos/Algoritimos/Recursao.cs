@@ -38,7 +38,7 @@ namespace EntendendoAlgoritimos.Algoritimos
         {
             Console.WriteLine("OK, tchau...");
         }
-        private static void CountagemRegressiva(int i)
+        private static void ContagemRegressiva(int i)
         {
             Console.WriteLine(i);
 
@@ -46,7 +46,7 @@ namespace EntendendoAlgoritimos.Algoritimos
             if (i <= 0) return;
 
             // caso recursivo - quando a função chama a si mesma
-            CountagemRegressiva(i - 1);
+            ContagemRegressiva(i - 1);
         }
 
     }
