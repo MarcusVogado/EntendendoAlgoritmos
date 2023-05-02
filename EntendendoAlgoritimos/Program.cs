@@ -44,6 +44,7 @@ public class Program
         #endregion
         #region TABELAS HASH
         Console.WriteLine("TABELAS HASH");
+        //Função Hash é uma função na qual você insere um string e depois disso, a função retorna um número
 
         #endregion
     }
