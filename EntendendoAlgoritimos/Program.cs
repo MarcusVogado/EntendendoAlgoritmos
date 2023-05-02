@@ -1,5 +1,6 @@
 ﻿//          Pesquisa_Binaria
 using EntendendoAlgoritimos.Algoritimos;
+using System.Reflection.Metadata;
 using System.Text;
 
 public class Program
@@ -45,7 +46,9 @@ public class Program
         #region TABELAS HASH
         Console.WriteLine("TABELAS HASH");
         //Função Hash é uma função na qual você insere um string e depois disso, a função retorna um número
-
+        var produto = "Barbeador";
+        var resultado= TabelaHash.Hash(produto);
+        Console.WriteLine(resultado);   
         #endregion
     }
 }
