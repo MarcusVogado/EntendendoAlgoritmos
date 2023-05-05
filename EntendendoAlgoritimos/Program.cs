@@ -48,7 +48,11 @@ public class Program
         //Função Hash é uma função na qual você insere um string e depois disso, a função retorna um número
         var produto = "Barbeador";
         var resultado= TabelaHash.Hash(produto);
-        Console.WriteLine(resultado);   
+        Console.WriteLine(resultado);
+
+        var votacao = TabelaHash.Votacao("antônio");
+        Console.WriteLine(votacao);
+
         #endregion
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace EntendendoAlgoritimos.Algoritimos
@@ -22,6 +23,29 @@ namespace EntendendoAlgoritimos.Algoritimos
             }
 
             return "Objeto Não encontrado";
+        }
+
+        public static string Votacao(string nome)
+        {
+            var nameNormalize = nome.ToUpper();
+            var listNormalize = new List<string>();
+            var eleitores = new List<string> { "Marcus", "Antônio", "Silmara", "José" };
+            
+            foreach (var eleitor in eleitores)
+            {
+                var eleitorNormalize = eleitor.ToUpper();
+                listNormalize.Add(eleitorNormalize);
+            }
+            var votaram = listNormalize.Contains(nameNormalize);
+            if (votaram is false)
+            {
+                eleitores.Add(nome);
+                return nome + ": Está apto para votar";
+            }
+            else
+            {
+                return "Não permitido esse eleitor já registrou o seu Voto";
+            }
         }
     }
 }
