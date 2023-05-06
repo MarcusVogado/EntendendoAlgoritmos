@@ -1,5 +1,5 @@
 ﻿//          Pesquisa_Binaria
-using EntendendoAlgoritimos.Algoritimos;
+using EntendendoAlgoritimos.Algoritmos;
 using System.Reflection.Metadata;
 using System.Text;
 
@@ -11,7 +11,7 @@ public class Program
         //Pesquisando por Número do índice
         Console.WriteLine("Pesquisando por Numero do índice");
         List<int> minhaLista_Int = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
-        Console.WriteLine(Pesquisa_Binaria.PesquisaBinariaInt(minhaLista_Int, 6));
+        Console.WriteLine(Pesquisa_Binaria.PesquisaBinariaInt(minhaLista_Int, 14));
         //Pesquisando por String, Email e etc.
         Console.WriteLine("Pesquisando por String, Email e etc.");
         List<string> minhaListaString = new List<string>() { "Marcus", "Silmara", "Alberto", "Alfredo" };
@@ -43,6 +43,7 @@ public class Program
         var arr = new[] { 10, 5, 2, 3, 11, 15, 16, 17, 20, 26, 4, 12 };
         Console.WriteLine(string.Join(", ", QuickSort.QuickSor(arr)));
         #endregion
+
         #region TABELAS HASH
         Console.WriteLine("TABELAS HASH");
         //Função Hash é uma função na qual você insere um string e depois disso, a função retorna um número

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntendendoAlgoritimos.Algoritimos
+namespace EntendendoAlgoritimos.Algoritmos
 {
     public class QuickSort
     {

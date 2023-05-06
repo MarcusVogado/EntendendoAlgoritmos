@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntendendoAlgoritimos.Algoritimos
+namespace EntendendoAlgoritimos.Algoritmos
 {
     public class Pesquisa_Binaria
     {
@@ -18,7 +18,7 @@ namespace EntendendoAlgoritimos.Algoritimos
                 var meio = (baixa + alta) / 2;//verificamos o elemento central
                 var chute = list[meio];                            //
                 if (chute == item)
-                    resultado = chute;  //onde achamos o item
+                    resultado = meio;  //onde achamos o item
                 if (chute > item)
                 {
                     alta = meio - 1; // se o chute[meio da lista] for mais alto que o item

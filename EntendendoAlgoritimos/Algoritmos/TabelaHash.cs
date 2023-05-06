@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace EntendendoAlgoritimos.Algoritimos
+namespace EntendendoAlgoritimos.Algoritmos
 {
     public class TabelaHash
     {
