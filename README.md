@@ -1,4 +1,4 @@
-<h1><b>ESTUDO SOBRE O LIVRO: ENTENDENDO ALGORITIMOS</b><h1>
+<h1><b>ESTUDO SOBRE O LIVRO: ENTENDENDO ALGORITMOS</b><h1>
 <h2>Autora: Aditya Y. Bhargava</h2><br>
   *****************************************************************
   <h1><b>Regras para construção do algoritmo *Retiradas do Livro da Faculdade UNIP*</b></h1><br>
