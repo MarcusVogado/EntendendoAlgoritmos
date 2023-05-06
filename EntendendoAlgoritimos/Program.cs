@@ -1,4 +1,4 @@
-﻿//          Pesquisa_Binaria
+﻿
 using EntendendoAlgoritimos.Algoritmos;
 using System.Reflection.Metadata;
 using System.Text;
