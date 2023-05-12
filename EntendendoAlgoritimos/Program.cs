@@ -1,5 +1,6 @@
 ﻿
 using EntendendoAlgoritimos.Algoritmos;
+using EntendendoAlgoritmos.Algoritmos;
 using System.Reflection.Metadata;
 using System.Text;
 
@@ -48,7 +49,7 @@ public class Program
         Console.WriteLine("TABELAS HASH");
         //Função Hash é uma função na qual você insere um string e depois disso, a função retorna um número
         var produto = "Barbeador";
-        var resultado= TabelaHash.Hash(produto);
+        var resultado = TabelaHash.Hash(produto);
         Console.WriteLine(resultado);
 
         var votacao = TabelaHash.Votacao("antônio");
@@ -57,6 +58,20 @@ public class Program
         #endregion
 
         #region PESQUISA EM LARGURA
+        //Criando meu GRAFO com Nome, Meus vizinhos em um array
+        Dictionary<string, string[]> _grafico = new Dictionary<string, string[]>();
+        _grafico.Add("eu", new[] { "Junior", "Alberto", "Francisco" });
+        _grafico.Add("Alberto", new[] { "João", "Vitor" });
+        _grafico.Add("Francisco", new[] { "Vitor" });
+        _grafico.Add("Junior", new[] { "Crislan" });
+        _grafico.Add("Vitor", Array.Empty<string>());
+        _grafico.Add("Tomas", Array.Empty<string>());
+        _grafico.Add("João", Array.Empty<string>());
+        _grafico.Add("Crislan", Array.Empty<string>());
+
+        var resultVendedor = PesquisaEmLargura.PesquisaLargura(_grafico, "eu");
+        Console.WriteLine(resultVendedor);
+
         #endregion
     }
 }
