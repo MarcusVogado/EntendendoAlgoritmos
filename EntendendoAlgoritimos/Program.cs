@@ -60,16 +60,17 @@ public class Program
         #region PESQUISA EM LARGURA
         //Criando meu GRAFO com Nome, Meus vizinhos em um array
         Dictionary<string, string[]> _grafico = new Dictionary<string, string[]>();
+        //Por ser uma árvore temos que ter conexões entre os itens e que eles existam em nossa arvore
         _grafico.Add("eu", new[] { "Junior", "Alberto", "Francisco" });
-        _grafico.Add("Alberto", new[] { "João", "Vitor" });
-        _grafico.Add("Francisco", new[] { "Vitor" });
+        _grafico.Add("Alberto", new[] { "João", "Vitor","Francisco" });
+        _grafico.Add("Francisco", new[] { "Vitor","Junior"});
         _grafico.Add("Junior", new[] { "Crislan" });
         _grafico.Add("Vitor", Array.Empty<string>());
         _grafico.Add("Tomas", Array.Empty<string>());
         _grafico.Add("João", Array.Empty<string>());
         _grafico.Add("Crislan", Array.Empty<string>());
 
-        var resultVendedor = PesquisaEmLargura.PesquisaLargura(_grafico, "eu");
+        var resultVendedor = PesquisaEmLargura.PesquisaLargura(_grafico, "Alberto");
         Console.WriteLine(resultVendedor);
 
         #endregion
