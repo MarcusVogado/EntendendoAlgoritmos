@@ -5,7 +5,7 @@ using System.Reflection.Metadata;
 using System.Text;
 
 public class Program
-{ 
+{
     public static void Main(string[] args)
     {
         #region PESQUISA BINARIA
@@ -62,8 +62,8 @@ public class Program
         Dictionary<string, string[]> _grafico = new Dictionary<string, string[]>();
         //Por ser uma árvore temos que ter conexões entre os itens e que eles existam em nossa arvore
         _grafico.Add("eu", new[] { "Junior", "Alberto", "Francisco" });
-        _grafico.Add("Alberto", new[] { "João", "Vitor","Francisco" });
-        _grafico.Add("Francisco", new[] { "Vitor","Junior"});
+        _grafico.Add("Alberto", new[] { "João", "Vitor", "Francisco" });
+        _grafico.Add("Francisco", new[] { "Vitor", "Junior" });
         _grafico.Add("Junior", new[] { "Crislan" });
         _grafico.Add("Vitor", Array.Empty<string>());
         _grafico.Add("Tomas", Array.Empty<string>());
@@ -103,7 +103,7 @@ public class Program
         parents.Add("b", "start");
         parents.Add("fin", null!);
 
-        var node = AlgoritmoDeDijkstra.FindLowestCostNode(costs,_processed);
+        var node = AlgoritmoDeDijkstra.FindLowestCostNode(costs, _processed);
         while (node != null)
         {
             var cost = costs[node];
@@ -118,18 +118,45 @@ public class Program
                 }
             }
             _processed.Add(node);
-            node = AlgoritmoDeDijkstra.FindLowestCostNode(costs,_processed);
+            node = AlgoritmoDeDijkstra.FindLowestCostNode(costs, _processed);
         }
         Console.WriteLine(string.Join(", ", costs));
 
-       
+
+
+
+
+        #endregion
+
+        #region ALGORITMOS GULOSOS
+        var statesNeeded = new HashSet<string> { "mt", "wa", "or", "id", "nv", "ut", "ca", "az" };
+        var stations = new Dictionary<string, HashSet<string>>();
+        stations.Add("kone", new HashSet<string> { "id", "nv", "ut" });
+        stations.Add("ktwo", new HashSet<string> { "wa", "id", "mt" });
+        stations.Add("kthree", new HashSet<string> { "or", "nv", "ca" });
+        stations.Add("kfour", new HashSet<string> { "nv", "ut" });
+        stations.Add("kfive", new HashSet<string> { "ca", "az" });
+        var finalStations = new HashSet<string>();
+        while (statesNeeded.Any())
+        {
+            string bestStation = null!;
+            var statesCovered = new HashSet<string>();
+            foreach (var station in stations)
+            {
+                var covered = new HashSet<string>(statesNeeded.Intersect(station.Value));
+                if (covered.Count > statesCovered.Count)
+                {
+                    bestStation = station.Key;
+                    statesCovered = covered;
+                }
+            }
+            statesNeeded.RemoveWhere(s => statesCovered.Contains(s));
+            finalStations.Add(bestStation);
+        }
+        Console.WriteLine(string.Join(", ", finalStations));
+
+        #endregion
+
     }
-
-
-    #endregion
-    #region ALGORITMOS GULOSOS
-
-    #endregion
-
 }
 
