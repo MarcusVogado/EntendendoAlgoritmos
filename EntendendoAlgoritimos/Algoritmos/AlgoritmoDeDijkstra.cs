@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace EntendendoAlgoritmos.Algoritmos
 {
-    internal class AlgoritmoDeDijkstra
+    public class AlgoritmoDeDijkstra
     {
+
     }
 }
