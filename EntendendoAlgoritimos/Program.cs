@@ -5,10 +5,7 @@ using System.Reflection.Metadata;
 using System.Text;
 
 public class Program
-{   //Dijkstra inicio
-    private const double _infinity = double.PositiveInfinity;
-    private static Dictionary<string, Dictionary<string, double>> _graph = new Dictionary<string, Dictionary<string, double>>();
-    private static List<string> _processed = new List<string>();//dijkstra final
+{ 
     public static void Main(string[] args)
     {
         #region PESQUISA BINARIA
@@ -78,9 +75,11 @@ public class Program
 
         #endregion
 
-        #region ALGORITMO DE DIJKSTRA        
-          
-   
+        #region ALGORITMO DE DIJKSTRA   
+        //Algoritmo utilizado para verificar qual o caminho mais curto muito utilizado por GPS
+        Dictionary<string, Dictionary<string, double>> _graph = new Dictionary<string, Dictionary<string, double>>();
+        const double _infinity = double.PositiveInfinity;
+        List<string> _processed = new List<string>();
         _graph.Add("start", new Dictionary<string, double>());
         _graph["start"].Add("a", 6.0);
         _graph["start"].Add("b", 2.0);
@@ -102,9 +101,9 @@ public class Program
         var parents = new Dictionary<string, string>();
         parents.Add("a", "start");
         parents.Add("b", "start");
-        parents.Add("fin", null);
+        parents.Add("fin", null!);
 
-        var node = FindLowestCostNode(costs);
+        var node = AlgoritmoDeDijkstra.FindLowestCostNode(costs,_processed);
         while (node != null)
         {
             var cost = costs[node];
@@ -119,28 +118,18 @@ public class Program
                 }
             }
             _processed.Add(node);
-            node = FindLowestCostNode(costs);
+            node = AlgoritmoDeDijkstra.FindLowestCostNode(costs,_processed);
         }
         Console.WriteLine(string.Join(", ", costs));
 
-        static string FindLowestCostNode(Dictionary<string, double> costs)
-        {
-            var lowestCost = double.PositiveInfinity;
-            string lowestCostNode = null;
-            foreach (var node in costs)
-            {
-                var cost = node.Value;
-                if (cost < lowestCost && !_processed.Contains(node.Key))
-                {
-                    lowestCost = cost;
-                    lowestCostNode = node.Key;
-                }
-            }
-            return lowestCostNode;
-        }
+       
     }
 
-   
+
     #endregion
+    #region ALGORITMOS GULOSOS
+
+    #endregion
+
 }
 
