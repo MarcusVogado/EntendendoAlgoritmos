@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EntendendoAlgoritmos.Algoritmos
 {
-    internal class AlgoritmosGulosos
+    public class AlgoritmosGulosos
     {
     }
 }
