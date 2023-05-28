@@ -9,7 +9,7 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        #region PESQUISA BINARIA
+        #region CAP.1 PESQUISA BINARIA
         //Pesquisando por Número do índice
         Console.WriteLine("Pesquisando por Numero do índice");
         List<int> minhaLista_Int = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
@@ -21,7 +21,7 @@ public class Program
         Console.WriteLine("_____________________________");
         #endregion
 
-        #region ORDENAÇÃO POR SELEÇÃO
+        #region CAP.2 ORDENAÇÃO POR SELEÇÃO
         Console.WriteLine("ORDENAÇÃO POR SELEÇÃO");
         var numbers = new int[] { 4, 5, 1, 3, 10, 9, 6, 8, 7, 2 };
         var sortedArr = OrdenacaoPorSelecao.SelectionSort(numbers);
@@ -29,7 +29,7 @@ public class Program
         Console.WriteLine("_____________________");
         #endregion
 
-        #region RECURSÃO
+        #region CAP.3 RECURSÃO
         // Toda função recursiva tem que ter o caso-Base-onde a função deve parar. e o caso- recursivo-onde a função chama ela mesma (cuidado com loop infinito)
         #region CAUCULAR FATORIAL
         Console.WriteLine("CAUCULAR FATORIAL");
@@ -40,13 +40,13 @@ public class Program
         #endregion
         #endregion
 
-        #region QUICKSORT
+        #region CAP.4 QUICKSORT
         Console.WriteLine("QUICKSORT");
         var arr = new[] { 10, 5, 2, 3, 11, 15, 16, 17, 20, 26, 4, 12 };
         Console.WriteLine(string.Join(", ", QuickSort.QuickSor(arr)));
         #endregion
 
-        #region TABELAS HASH
+        #region CAP.5 TABELAS HASH
         Console.WriteLine("TABELAS HASH");
         //Função Hash é uma função na qual você insere um string e depois disso, a função retorna um número
         var produto = "Barbeador";
@@ -58,7 +58,7 @@ public class Program
 
         #endregion
 
-        #region PESQUISA EM LARGURA
+        #region CAP.6 PESQUISA EM LARGURA
         //Criando meu GRAFO com Nome, Meus vizinhos em um array
         Dictionary<string, string[]> _grafico = new Dictionary<string, string[]>();
         //Por ser uma árvore temos que ter conexões entre os itens e que eles existam em nossa arvore
@@ -76,7 +76,7 @@ public class Program
 
         #endregion
 
-        #region ALGORITMO DE DIJKSTRA   
+        #region CAP.7 ALGORITMO DE DIJKSTRA   
         //Algoritmo utilizado para verificar qual o caminho mais curto muito utilizado por GPS
         Dictionary<string, Dictionary<string, double>> _graph = new Dictionary<string, Dictionary<string, double>>();
         const double _infinity = double.PositiveInfinity;
@@ -129,13 +129,13 @@ public class Program
 
         #endregion
 
-        #region ALGORITMOS GULOSOS
+        #region CAP.8 ALGORITMOS GULOSOS
 
         AlgoritmosGulosos.GulosoEstacoes();
         AlgoritmosGulosos.GulosoFrutas();
         #endregion
 
-        #region PROGRAMAÇÃO DINÂMICA
+        #region CAP.9 PROGRAMAÇÃO DINÂMICA
         var array =ProgramacaoDinamica.Dinamica("hish", "fish");
         for (int i = 0; i < array.GetLength(0); i++)
         {
