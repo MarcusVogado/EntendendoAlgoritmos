@@ -1,6 +1,7 @@
 ﻿
 using EntendendoAlgoritimos.Algoritmos;
 using EntendendoAlgoritmos.Algoritmos;
+using System;
 using System.Reflection.Metadata;
 using System.Text;
 
@@ -134,6 +135,21 @@ public class Program
         AlgoritmosGulosos.GulosoFrutas();
         #endregion
 
+        #region PROGRAMAÇÃO DINÂMICA
+        var array =ProgramacaoDinamica.Dinamica("hish", "fish");
+        for (int i = 0; i < array.GetLength(0); i++)
+        {
+            for (int j = 0; j < array.GetLength(1); j++)
+            {
+                Console.Write("{0} ", array[i, j]);
+            }   
+            Console.WriteLine();
+        }
+
+        
+        #endregion
+        
     }
 }
+
 
