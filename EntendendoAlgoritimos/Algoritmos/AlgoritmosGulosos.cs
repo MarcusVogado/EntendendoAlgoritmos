@@ -46,7 +46,7 @@ namespace EntendendoAlgoritmos.Algoritmos
             foreach(var itens in frutas)
             {
                 var exist= vegetais.Where(s => itens.Contains(s));
-                if (exist!=null)
+                if (exist!=null) //fazendo a união das listas e removendo duplicidades.
                 {
                     vegetais.Add(itens);
                 }                
