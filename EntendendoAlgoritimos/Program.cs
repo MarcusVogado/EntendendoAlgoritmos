@@ -146,10 +146,14 @@ public class Program
             Console.WriteLine();
         }
 
-        
+
         #endregion
-        
-    }
+
+        #region K-VIZINHOS MAIS PRÓXIMOS(K-NN)
+        Console.WriteLine("K-VIZINHOS MAIS PRÓXIMOS(K-NN)");
+        KVizinhos.Vizinhos();
+		#endregion
+	}
 }
 
 
