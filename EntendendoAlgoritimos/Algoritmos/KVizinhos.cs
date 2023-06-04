@@ -12,9 +12,9 @@ namespace EntendendoAlgoritmos.Algoritmos
 		{
 			Console.WriteLine("\n k-NN Classificação demonstrativa \n");
 
-			double[][] trainData = LoadData();  // get the normalized data
+			double[][] trainData = LoadData();  // obtendo os dados normalizados
 
-			int numFeatures = 2;  // predictor variables
+			int numFeatures = 2;  // variáveis predicadas , não utilizada ainda só caso precise
 			int numClasses = 3;   // 0, 1, 2
 
 			double[] unknown = new double[] { 5.25, 1.75 };
@@ -38,8 +38,8 @@ namespace EntendendoAlgoritmos.Algoritmos
 
 		static int Classify(double[] unknown, double[][] trainData, int numClasses, int k)
 		{
-			// compute and store distances from unknown to all train data 
-			int n = trainData.Length;  // number data items
+			// calcular e armazenar distâncias do desconhecido para todos os dados do trem
+			int n = trainData.Length;  // número de dados numericos
 			IndexAndDistance[] info = new IndexAndDistance[n];
 			for (int i = 0; i < n; ++i)
 			{
@@ -50,7 +50,7 @@ namespace EntendendoAlgoritmos.Algoritmos
 				info[i] = curr;
 			}
 
-			Array.Sort(info);  // sort by distance
+			Array.Sort(info);  // classificar por distância
 			Console.WriteLine("\nMais Próximo  /  Distancia  / Classe");
 			Console.WriteLine("==============================");
 			for (int i = 0; i < k; ++i)
@@ -60,17 +60,17 @@ namespace EntendendoAlgoritmos.Algoritmos
 				Console.WriteLine("( " + trainData[info[i].idx][0] + "," + trainData[info[i].idx][1] + " )  :  " + dist + "        " + c);
 			}
 
-			int result = Vote(info, trainData, numClasses, k);  // k nearest classes
+			int result = Vote(info, trainData, numClasses, k);  // turmas mais próximas em K
 			return result;
 
-		} // Classify
+		} // Classificaçao
 
 		static int Vote(IndexAndDistance[] info, double[][] trainData, int numClasses, int k)
 		{
-			int[] votes = new int[numClasses];  // one cell per class
-			for (int i = 0; i < k; ++i)  // just first k nearest
+			int[] votes = new int[numClasses];  // uma célula por classe
+			for (int i = 0; i < k; ++i)  // apenas o primeiro k mais próximo
 			{
-				int idx = info[i].idx;  // which item
+				int idx = info[i].idx;  // qual item
 				int c = (int)trainData[idx][2];  
 				++votes[c];
 			}
@@ -102,7 +102,7 @@ namespace EntendendoAlgoritmos.Algoritmos
 				sum += (unknown[i] - data[i]) * (unknown[i] - data[i]);
 			return Math.Sqrt(sum);
 		}
-
+		//Data
 		static double[][] LoadData()
 		{
 			double[][] data = new double[33][];
@@ -145,14 +145,14 @@ namespace EntendendoAlgoritmos.Algoritmos
 			return data;
 		}
 
-	} // Program
+	} // Programa
 
 	public class IndexAndDistance : IComparable<IndexAndDistance>
 	{
-		public int idx;  // index of a training item
-		public double dist;  // distance from train item to unknown
+		public int idx;  // índice de um item de treinamento
+		public double dist;  // distância do item de trem para desconhecido
 
-		// need to sort these to find k closest
+		// precisa classificá-los para encontrar k mais próximo
 		public int CompareTo(IndexAndDistance other)
 		{
 			if (this.dist < other.dist) return -1;
